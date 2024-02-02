@@ -5,6 +5,6 @@ export const theme = Object.freeze({
         grey: "#E0E0E0",
         greyLight: "#f6f6f6",
         greyText: "#919191",
-        thTable: "#51b0ff"
+        thTable: "#51b0ff",
     },
 });

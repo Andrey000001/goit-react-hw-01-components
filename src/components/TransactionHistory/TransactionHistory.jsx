@@ -1,4 +1,4 @@
-import { Table, Th ,Td ,Tr} from "./TransactionHistory.styled";
+import { Table, Th, Td, Tr } from "./TransactionHistory.styled";
 export const TransactionHistory = ({ transactions }) => {
     return (
         <Table>
