@@ -33,5 +33,5 @@ ReactDOM.render(
             <App />
         </ThemeProvider>
     </React.StrictMode>,
-    document.querySelector("#root")
+    document.getElementById("root")
 );
