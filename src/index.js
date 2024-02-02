@@ -7,7 +7,6 @@ import { theme } from "./constans/theme";
 import "normalize.css";
 import { Global, css } from "@emotion/react";
 
-
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
         <ThemeProvider theme={theme}>
