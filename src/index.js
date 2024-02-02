@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 
 import { App } from "./components/App/App";
 import { ThemeProvider } from "@emotion/react";
@@ -7,7 +7,7 @@ import { theme } from "./constans/theme";
 import "normalize.css";
 import { Global, css } from "@emotion/react";
 
-ReactDOM.render(
+ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
         <ThemeProvider theme={theme}>
             <Global
@@ -32,6 +32,5 @@ ReactDOM.render(
             />
             <App />
         </ThemeProvider>
-    </React.StrictMode>,
-    document.getElementById("root")
+    </React.StrictMode>
 );
