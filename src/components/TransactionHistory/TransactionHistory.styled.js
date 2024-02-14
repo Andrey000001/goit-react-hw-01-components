@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 
 export const Contant = styled.section`
-    padding: 200px
-`
+    padding: 200px;
+`;
 export const Table = styled.table`
     max-width: 600px;
     width: 100%;

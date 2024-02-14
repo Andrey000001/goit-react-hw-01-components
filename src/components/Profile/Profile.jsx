@@ -1,19 +1,42 @@
-import PropTypes from "prop-types"; // ES6
-import { Case } from "./Case/Case";
-import { Content } from "./Profile.styled";
-export const Profile = ({ user }) => {
-    const { avatar, tag, location, stats, username } = user;
+import PropTypes from "prop-types";
+import {
+    Content,
+    ProfileSelf,
+    Description,
+    Name,
+    Tag,
+    Location,
+    Stats,
+    Card,
+    Label,
+    Quantity,
+} from "./Profile.styled";
+export const Profile = ({ username, tag, location, avatar, stats }) => {
+    const { views, followers, likes } = stats;
     return (
         <Content>
-            <Case
-                username={username}
-                avatar={avatar}
-                tag={tag}
-                location={location}
-                followers={stats.followers}
-                views={stats.views}
-                likes={stats.likes}
-            />
+            <ProfileSelf class="profile">
+                <Description class="description">
+                    <img src={avatar} alt={username} width="30" height="30" />
+                    <Name>{username}</Name>
+                    <Tag>{tag}</Tag>
+                    <Location>{location}</Location>
+                </Description>
+                <Stats class="stats">
+                    <Card>
+                        <Label class="label">Followers</Label>
+                        <Quantity class="quantity">{followers}</Quantity>
+                    </Card>
+                    <Card>
+                        <Label class="label">Views</Label>
+                        <Quantity class="quantity">{views}</Quantity>
+                    </Card>
+                    <Card>
+                        <Label>Likes</Label>
+                        <Quantity>{likes}</Quantity>
+                    </Card>
+                </Stats>
+            </ProfileSelf>
         </Content>
     );
 };

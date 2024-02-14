@@ -1,17 +1,16 @@
 import PropTypes from "prop-types"; // ES6
-import { Friend } from "./Friend/Friend";
-import { List } from "./FriendList.styled";
+import { List, ChoiceGreen, ChoiceRed, Item } from "./FriendList.styled";
 
 export const FriedList = ({ friends }) => {
     return (
         <List>
             {friends.map(({ avatar, name, isOnline, id }) => (
-                <Friend
-                    id={id}
-                    avatar={avatar}
-                    name={name}
-                    isOnline={isOnline}
-                />
+                <Item key={id}>
+                    {isOnline ? <ChoiceGreen /> : <ChoiceRed />}
+                    <span>{isOnline}</span>
+                    <img src={avatar} alt={name} width="48" />
+                    <p>{name}</p>
+                </Item>
             ))}
         </List>
     );
