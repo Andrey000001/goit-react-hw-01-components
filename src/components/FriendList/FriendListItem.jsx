@@ -1,11 +1,12 @@
 import PropTypes from "prop-types";
-import { Item, ChoiceGreen, ChoiceRed } from "./FriendList.styled";
+import { Item, ChoiseStatus } from "./FriendList.styled";
 
 export const FriendListItem = ({ friendsInfo }) => {
     const { name, isOnline, avatar } = friendsInfo;
     return (
         <Item>
-            {isOnline ? <ChoiceGreen /> : <ChoiceRed />}
+            
+            <ChoiseStatus isOnline={isOnline}/>
             <img src={avatar} alt={name} width="48" />
             <p>{name}</p>
         </Item>

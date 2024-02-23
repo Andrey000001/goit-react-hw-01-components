@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { FaCircle } from "react-icons/fa";
 
 export const List = styled.ul`
     padding-top: 100px;
@@ -10,11 +9,12 @@ export const List = styled.ul`
     gap: 5px;
 `;
 
-export const ChoiceRed = styled(FaCircle)`
-    fill: red;
-`;
-export const ChoiceGreen = styled(FaCircle)`
-    fill: green;
+export const ChoiseStatus = styled.span`
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background-color: ${({ isOnline }) => (isOnline ? "red" : "green")};
 `;
 
 export const Item = styled.li`
